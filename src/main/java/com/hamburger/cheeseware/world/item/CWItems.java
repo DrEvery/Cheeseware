@@ -12,8 +12,49 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class CWItems {
     public static final DeferredRegister.Items CHEESEITEMS = DeferredRegister.createItems(Cheeseware.MODID);
 
+    //Cheeses
     public static final DeferredItem<Item> CHEDDAR_CHEESE = CHEESEITEMS.registerItem(
             "cheddar_cheese",
+            Item::new,
+            new Item.Properties().food(
+                    new FoodProperties.Builder()
+                            .nutrition(6)
+                            .build()
+            )
+    );
+
+    public static final DeferredItem<Item> SWISS_CHEESE = CHEESEITEMS.registerItem(
+            "swiss_cheese",
+            Item::new,
+            new Item.Properties().food(
+                    new FoodProperties.Builder()
+                            .nutrition(6)
+                            .build()
+            )
+    );
+
+    public static final DeferredItem<Item> PECORINO_CHEESE = CHEESEITEMS.registerItem(
+            "pecorino_cheese",
+            Item::new,
+            new Item.Properties().food(
+                    new FoodProperties.Builder()
+                            .nutrition(6)
+                            .build()
+            )
+    );
+
+    public static final DeferredItem<Item> CASU_MARTZU_CHEESE = CHEESEITEMS.registerItem(
+            "casu_martzu_cheese",
+            Item::new,
+            new Item.Properties().food(
+                    new FoodProperties.Builder()
+                            .nutrition(6)
+                            .build()
+            )
+    );
+
+    public static final DeferredItem<Item> MUNSTER_CHEESE = CHEESEITEMS.registerItem(
+            "munster_cheese",
             Item::new,
             new Item.Properties().food(
                     new FoodProperties.Builder()
