@@ -5,6 +5,7 @@ import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
@@ -21,6 +22,15 @@ public class CWBlocks {
                     .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":milk_cauldron_block")))
                     ,CauldronInteraction.EMPTY)
     );
+
+    //Cheese Wheels
+    public static final DeferredBlock<Block> CHEDDAR_WHEEL_BLOCK = BLOCKS.registerBlock(
+            "cheddar_wheel_block",
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(2.0F).noOcclusion()
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":cheddar_wheel_block"))))
+    );
+
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
