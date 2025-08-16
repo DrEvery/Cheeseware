@@ -17,18 +17,18 @@ public class CWBlocks {
 
     public static final DeferredBlock<MilkCauldronBlock> MILK_CAULDRON_BLOCK = BLOCKS.registerBlock(
             "milk_cauldron_block",
-            registryName -> new MilkCauldronBlock(BlockBehaviour.Properties.of()
+            properties -> new MilkCauldronBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(2.0F).noOcclusion()
                     .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":milk_cauldron_block")))
                     ,CauldronInteraction.EMPTY)
     );
 
     //Cheese Wheels
-    public static final DeferredBlock<Block> CHEDDAR_WHEEL_BLOCK = BLOCKS.registerBlock(
-            "cheddar_wheel_block",
-            registryName -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(2.0F).noOcclusion()
-                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":cheddar_wheel_block"))))
+    public static final DeferredBlock<CheeseWheelBlock> CHEDDAR_WHEEL_BLOCK = BLOCKS.registerBlock(
+            "cheddar_wheel",
+            properties -> new CheeseWheelBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE).noOcclusion()
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":cheddar_wheel"))))
     );
 
 
