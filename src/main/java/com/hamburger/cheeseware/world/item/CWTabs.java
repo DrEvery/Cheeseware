@@ -20,11 +20,12 @@ public class CWTabs {
                     .title(Component.translatable("itemGroup." + Cheeseware.MODID + ".cheesetab"))
                     .icon(() -> new ItemStack(CWItems.CHEDDAR_CHEESE.get()))
                     .displayItems((params, output) -> {
-                        output.accept(CWItems.CHEDDAR_CHEESE.get());
-                        output.accept(CWItems.SWISS_CHEESE.get());
-                        output.accept(CWItems.PECORINO_CHEESE.get());
-                        output.accept(CWItems.CASU_MARTZU_CHEESE.get());
-                        output.accept(CWItems.MUNSTER_CHEESE.get());
+                        output.accept(CWItems.CHEDDAR_WHEEL);
+                        output.accept(CWItems.CHEDDAR_CHEESE);
+                        output.accept(CWItems.SWISS_CHEESE);
+                        output.accept(CWItems.PECORINO_CHEESE);
+                        output.accept(CWItems.CASU_MARTZU_CHEESE);
+                        output.accept(CWItems.MUNSTER_CHEESE);
                     })
                     .build()
     );
