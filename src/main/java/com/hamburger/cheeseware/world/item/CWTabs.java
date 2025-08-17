@@ -22,6 +22,7 @@ public class CWTabs {
                     .displayItems((params, output) -> {
                         output.accept(CWItems.CHEDDAR_WHEEL);
                         output.accept(CWItems.CHEDDAR_CHEESE);
+                        output.accept(CWItems.SWISS_WHEEL);
                         output.accept(CWItems.SWISS_CHEESE);
                         output.accept(CWItems.PECORINO_CHEESE);
                         output.accept(CWItems.CASU_MARTZU_CHEESE);

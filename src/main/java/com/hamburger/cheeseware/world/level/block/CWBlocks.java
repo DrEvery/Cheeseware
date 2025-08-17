@@ -5,6 +5,7 @@ import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
@@ -23,11 +24,16 @@ public class CWBlocks {
     );
 
     //Cheese Wheels
-    public static final DeferredBlock<AbstractCheeseWheelBlock> CHEDDAR_WHEEL_BLOCK = BLOCKS.registerBlock(
+    public static final DeferredBlock<CheddarWheel> CHEDDAR_WHEEL_BLOCK = BLOCKS.registerBlock(
             "cheddar_wheel",
-            properties -> new CheddarWheel(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.STONE).noOcclusion()
+            properties -> new CheddarWheel(BlockBehaviour.Properties.of().noOcclusion().sound(SoundType.HONEY_BLOCK)
                     .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":cheddar_wheel"))))
+    );
+
+    public static final DeferredBlock<SwissWheel> SWISS_WHEEL_BLOCK = BLOCKS.registerBlock(
+            "swiss_wheel",
+            properties -> new SwissWheel(BlockBehaviour.Properties.of().noOcclusion().sound(SoundType.HONEY_BLOCK)
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":swiss_wheel"))))
     );
 
 

@@ -38,6 +38,11 @@ public class CWItems {
             )
     );
 
+    public static final DeferredItem<BlockItem> SWISS_WHEEL = CHEESEITEMS.registerSimpleBlockItem(
+            "swiss_wheel",
+            CWBlocks.SWISS_WHEEL_BLOCK
+    );
+
     public static final DeferredItem<Item> PECORINO_CHEESE = CHEESEITEMS.registerItem(
             "pecorino_cheese",
             Item::new,
