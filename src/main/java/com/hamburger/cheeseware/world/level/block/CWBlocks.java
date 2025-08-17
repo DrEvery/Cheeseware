@@ -19,7 +19,7 @@ public class CWBlocks {
             properties -> new MilkCauldronBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(2.0F).noOcclusion()
                     .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":milk_cauldron_block")))
-                    ,CauldronInteraction.EMPTY)
+                    , CauldronInteraction.EMPTY)
     );
 
     //Cheese Wheels

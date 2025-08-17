@@ -11,9 +11,8 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public abstract class AbstractCheeseWheelBlock extends Block {
-
-    public static final IntegerProperty PIECES;
-    private static final VoxelShape SHAPE;
+    public static final IntegerProperty PIECES = BlockStateProperties.BITES;
+    private static final VoxelShape SHAPE = Block.box(3.0F, 0.0F, 3.0F, 13.0F, 4.0F, 13.0F);
 
     public AbstractCheeseWheelBlock(Properties properties) {
         super(properties);
@@ -27,10 +26,5 @@ public abstract class AbstractCheeseWheelBlock extends Block {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(PIECES);
-    }
-
-    static {
-        PIECES = BlockStateProperties.BITES;
-        SHAPE = Block.box(3.0F, 0.0F, 3.0F, 13.0F, 4.0F, 13.0F);
     }
 }

@@ -2,7 +2,6 @@ package com.hamburger.cheeseware.datagen;
 
 import com.hamburger.cheeseware.Cheeseware;
 import com.hamburger.cheeseware.world.item.CWItems;
-import com.hamburger.cheeseware.world.level.block.CWBlocks;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
@@ -22,6 +21,6 @@ public class ENUSLangProvider extends LanguageProvider {
         this.addItem(CWItems.MUNSTER_CHEESE, "Munster Cheese");
 
         //Tabs
-        this.add("itemGroup." + Cheeseware.MODID + ".cheesetab", "Cheeseware");
+        this.add("itemGroup.%s.cheesetab".formatted(Cheeseware.MODID), "Cheeseware");
     }
 }

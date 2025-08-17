@@ -11,7 +11,6 @@ public class MilkCauldronBlock extends AbstractCauldronBlock {
     }
 
 
-
     @Override
     protected MapCodec<MilkCauldronBlock> codec() {
         return null;
