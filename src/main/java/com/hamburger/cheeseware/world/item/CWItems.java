@@ -73,11 +73,6 @@ public class CWItems {
             )
     );
 
-    public static final DeferredItem<BlockItem> MILK_CAULDRON_ITEM = CHEESEITEMS.registerSimpleBlockItem(
-            CWBlocks.MILK_CAULDRON_BLOCK,
-            new Item.Properties()
-    );
-
     public static void register(IEventBus eventBus) {
         CHEESEITEMS.register(eventBus);
     }

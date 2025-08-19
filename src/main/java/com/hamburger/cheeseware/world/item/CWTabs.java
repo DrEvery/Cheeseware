@@ -1,7 +1,6 @@
 package com.hamburger.cheeseware.world.item;
 
 import com.hamburger.cheeseware.Cheeseware;
-import com.hamburger.cheeseware.world.level.block.CWBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;

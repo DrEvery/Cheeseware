@@ -15,11 +15,10 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class CWBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Cheeseware.MODID);
 
-    public static final DeferredBlock<MilkCauldronBlock> MILK_CAULDRON_BLOCK = BLOCKS.registerBlock(
-            "milk_cauldron_block",
-            properties -> new MilkCauldronBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(2.0F).noOcclusion()
-                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":milk_cauldron_block")))
+    public static final DeferredBlock<MilkCauldronBlock> MILK_CAULDRON = BLOCKS.registerBlock(
+            "milk_cauldron",
+            properties -> new MilkCauldronBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(2.0F).requiresCorrectToolForDrops().noOcclusion()
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":milk_cauldron")))
                     , CauldronInteraction.EMPTY)
     );
 

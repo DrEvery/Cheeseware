@@ -30,12 +30,12 @@ public interface MilkCauldronInteractionMixin {
 
     @Unique
     private static InteractionResult fillMilkInteraction(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, ItemStack filledStack) {
-        return isUnderWater(level, pos) ? InteractionResult.CONSUME : emptyBucket(level, pos, player, hand, filledStack, CWBlocks.MILK_CAULDRON_BLOCK.get().defaultBlockState(), SoundEvents.BUCKET_EMPTY);
+        return isUnderWater(level, pos) ? InteractionResult.CONSUME : emptyBucket(level, pos, player, hand, filledStack, CWBlocks.MILK_CAULDRON.get().defaultBlockState(), SoundEvents.BUCKET_EMPTY);
     }
 
     @Unique
     private static InteractionResult emptyMilkInteraction(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, ItemStack emptyStack) {
-        if (state.getBlock() == CWBlocks.MILK_CAULDRON_BLOCK.get()) {
+        if (state.getBlock() == CWBlocks.MILK_CAULDRON.get()) {
             return fillBucket(state, level, pos, player, hand, emptyStack, new ItemStack(Items.MILK_BUCKET), (state1) -> true, SoundEvents.BUCKET_FILL);
         } else if (state.getBlock() == Blocks.LAVA_CAULDRON) {
             return fillBucket(state, level, pos, player, hand, emptyStack, new ItemStack(Items.LAVA_BUCKET), (p_175651_) -> true, SoundEvents.BUCKET_FILL_LAVA);
