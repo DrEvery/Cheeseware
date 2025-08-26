@@ -1,6 +1,8 @@
 package com.hamburger.cheeseware.world.level.block;
 
 import com.hamburger.cheeseware.Cheeseware;
+import com.hamburger.cheeseware.world.level.block.wheels.CheddarWheel;
+import com.hamburger.cheeseware.world.level.block.wheels.SwissWheel;
 import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;

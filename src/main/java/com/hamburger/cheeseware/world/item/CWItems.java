@@ -19,6 +19,7 @@ public class CWItems {
             new Item.Properties().food(
                     new FoodProperties.Builder()
                             .nutrition(6)
+                            .saturationModifier(7F)
                             .build()
             )
     );
@@ -33,7 +34,8 @@ public class CWItems {
             Item::new,
             new Item.Properties().food(
                     new FoodProperties.Builder()
-                            .nutrition(6)
+                            .nutrition(5)
+                            .saturationModifier(6F)
                             .build()
             )
     );
@@ -69,6 +71,18 @@ public class CWItems {
             new Item.Properties().food(
                     new FoodProperties.Builder()
                             .nutrition(6)
+                            .build()
+            )
+    );
+
+    //CRACKER
+    public static final DeferredItem<Item> CRACKER = CHEESEITEMS.registerItem(
+            "cracker",
+            Item::new,
+            new Item.Properties().food(
+                    new FoodProperties.Builder()
+                            .nutrition(3)
+                            .saturationModifier(1F)
                             .build()
             )
     );

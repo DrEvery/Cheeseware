@@ -21,6 +21,8 @@ public class ENUSLangProvider extends LanguageProvider {
         this.addItem(CWItems.CASU_MARTZU_CHEESE, "Casu Martzu");
         this.addItem(CWItems.MUNSTER_CHEESE, "Munster Cheese");
 
+        this.addItem(CWItems.CRACKER, "Cracker");
+
         //Tabs
         this.add("itemGroup.%s.cheesetab".formatted(Cheeseware.MODID), "Cheeseware");
     }

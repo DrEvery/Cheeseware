@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "cheeseware:milk_cauldron"
+    "cheeseware:milk_cauldron",
+    "cheeseware:cheddar_cauldron"
   ]
 }

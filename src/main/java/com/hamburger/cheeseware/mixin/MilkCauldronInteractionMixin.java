@@ -1,5 +1,6 @@
 package com.hamburger.cheeseware.mixin;
 
+import com.hamburger.cheeseware.world.item.CWItems;
 import com.hamburger.cheeseware.world.level.block.CWBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.cauldron.CauldronInteraction;

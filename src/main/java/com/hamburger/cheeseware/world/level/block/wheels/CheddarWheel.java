@@ -1,6 +1,7 @@
-package com.hamburger.cheeseware.world.level.block;
+package com.hamburger.cheeseware.world.level.block.wheels;
 
 import com.hamburger.cheeseware.world.item.CWItems;
+import com.hamburger.cheeseware.world.level.block.AbstractCheeseWheelBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
