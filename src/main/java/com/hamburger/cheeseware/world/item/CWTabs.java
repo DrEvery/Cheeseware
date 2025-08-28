@@ -28,6 +28,8 @@ public class CWTabs {
                         output.accept(CWItems.MUNSTER_CHEESE);
 
                         output.accept(CWItems.CRACKER);
+                        output.accept(CWItems.SALT);
+                        output.accept(CWItems.SALT_BLOCK);
                     })
                     .build()
     );

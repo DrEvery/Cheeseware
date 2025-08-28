@@ -7,7 +7,6 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 
 import java.util.Set;
 
@@ -23,9 +22,10 @@ public class CWLootSubProvider extends BlockLootSubProvider {
         dropSelf(CWBlocks.CHEDDAR_WHEEL_BLOCK.get());
         dropSelf(CWBlocks.SWISS_WHEEL_BLOCK.get());
 
+        dropSelf(CWBlocks.SALT_BLOCK.get());
+
         dropOther(CWBlocks.MILK_CAULDRON.get(), Items.CAULDRON);
         dropOther(CWBlocks.CHEDDAR_CAULDRON.get(), Items.CAULDRON);
-
     }
 
     @Override

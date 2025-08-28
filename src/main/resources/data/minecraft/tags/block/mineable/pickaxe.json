@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "cheeseware:milk_cauldron",
-    "cheeseware:cheddar_cauldron"
+    "cheeseware:cheddar_cauldron",
+    "cheeseware:salt_block"
   ]
 }

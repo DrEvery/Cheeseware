@@ -75,7 +75,7 @@ public class CWItems {
             )
     );
 
-    //CRACKER
+    //MISC
     public static final DeferredItem<Item> CRACKER = CHEESEITEMS.registerItem(
             "cracker",
             Item::new,
@@ -85,6 +85,17 @@ public class CWItems {
                             .saturationModifier(1F)
                             .build()
             )
+    );
+
+    public static final DeferredItem<Item> SALT = CHEESEITEMS.registerItem(
+            "salt",
+            Item::new,
+            new Item.Properties()
+    );
+
+    public static final DeferredItem<BlockItem> SALT_BLOCK = CHEESEITEMS.registerSimpleBlockItem(
+            "salt_block",
+            CWBlocks.SALT_BLOCK
     );
 
     public static void register(IEventBus eventBus) {

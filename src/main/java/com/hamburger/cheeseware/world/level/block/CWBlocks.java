@@ -8,6 +8,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.AbstractCauldronBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -43,6 +45,12 @@ public class CWBlocks {
             "swiss_wheel",
             properties -> new SwissWheel(BlockBehaviour.Properties.of().strength(0.5F).noOcclusion().sound(SoundType.HONEY_BLOCK)
                     .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":swiss_wheel"))))
+    );
+
+    public static final DeferredBlock<Block> SALT_BLOCK = BLOCKS.registerBlock(
+            "salt_block",
+            properties -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().mapColor(MapColor.FIRE).strength(0.5F)
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":salt_block"))))
     );
 
 
