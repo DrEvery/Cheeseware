@@ -1,6 +1,7 @@
 package com.hamburger.cheeseware.world.level.block;
 
 import com.hamburger.cheeseware.Cheeseware;
+import com.hamburger.cheeseware.world.level.block.entity.MilkCauldronBlockEntity;
 import com.hamburger.cheeseware.world.level.block.wheels.CheddarWheel;
 import com.hamburger.cheeseware.world.level.block.wheels.SwissWheel;
 import net.minecraft.core.cauldron.CauldronInteraction;
@@ -9,29 +10,29 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.AbstractCauldronBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.function.Supplier;
+
 public class CWBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Cheeseware.MODID);
 
     public static final DeferredBlock<AbstractCauldronBlock> MILK_CAULDRON = BLOCKS.registerBlock(
             "milk_cauldron",
-            properties -> new MilkCauldron(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(2.0F).requiresCorrectToolForDrops().noOcclusion()
-                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":milk_cauldron"))).randomTicks()
-                    , CauldronInteraction.EMPTY)
+            properties -> new MilkCauldronBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(2.0F).requiresCorrectToolForDrops().noOcclusion()
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":milk_cauldron"))).randomTicks())
     );
 
     public static final DeferredBlock<AbstractCauldronBlock> CHEDDAR_CAULDRON = BLOCKS.registerBlock(
             "cheddar_cauldron",
-            properties -> new CheddarCauldron(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(2.0F).requiresCorrectToolForDrops().noOcclusion()
-                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":cheddar_cauldron")))
-                    , CauldronInteraction.EMPTY)
+            properties -> new CheddarCauldronBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(2.0F).requiresCorrectToolForDrops().noOcclusion()
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":cheddar_cauldron"))), CauldronInteraction.EMPTY)
     );
 
     //Cheese Wheels

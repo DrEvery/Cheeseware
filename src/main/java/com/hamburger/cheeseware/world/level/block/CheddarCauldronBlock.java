@@ -10,8 +10,9 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.AbstractCauldronBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class CheddarCauldron extends AbstractCauldronBlock {
-    public CheddarCauldron(Properties properties, CauldronInteraction.InteractionMap interactions) {
+public class CheddarCauldronBlock extends AbstractCauldronBlock {
+
+    public CheddarCauldronBlock(Properties properties, CauldronInteraction.InteractionMap interactions) {
         super(properties, interactions);
     }
 

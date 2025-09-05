@@ -2,6 +2,7 @@ package com.hamburger.cheeseware;
 
 import com.hamburger.cheeseware.world.item.CWItems;
 import com.hamburger.cheeseware.world.item.CWTabs;
+import com.hamburger.cheeseware.world.level.block.CWBlockEntities;
 import com.hamburger.cheeseware.world.level.block.CWBlocks;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -36,6 +37,7 @@ public class Cheeseware {
 
         CWItems.register(modEventBus);
         CWBlocks.register(modEventBus);
+        CWBlockEntities.register(modEventBus);
         CWTabs.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);

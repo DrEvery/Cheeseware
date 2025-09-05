@@ -87,6 +87,11 @@ public class CWItems {
             )
     );
 
+    public static final DeferredItem<Item> RENNET = CHEESEITEMS.registerItem(
+            "rennet",
+            Item::new
+    );
+
     public static final DeferredItem<Item> SALT = CHEESEITEMS.registerItem(
             "salt",
             Item::new,
