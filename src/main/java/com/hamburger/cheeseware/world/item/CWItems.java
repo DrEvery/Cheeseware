@@ -70,6 +70,11 @@ public class CWItems {
             )
     );
 
+    public static final DeferredItem<BlockItem> CASU_MARTZU_WHEEL = CHEESEITEMS.registerSimpleBlockItem(
+            "casu_martzu_wheel",
+            CWBlocks.CASU_MARTZU_WHEEL_BLOCK
+    );
+
     public static final DeferredItem<Item> MUNSTER_CHEESE = CHEESEITEMS.registerItem(
             "munster_cheese",
             Item::new,

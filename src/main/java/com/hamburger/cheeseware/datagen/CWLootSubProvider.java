@@ -21,6 +21,8 @@ public class CWLootSubProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(CWBlocks.CHEDDAR_WHEEL_BLOCK.get());
         dropSelf(CWBlocks.SWISS_WHEEL_BLOCK.get());
+        dropSelf(CWBlocks.PECORINO_WHEEL_BLOCK.get());
+        dropSelf(CWBlocks.CASU_MARTZU_WHEEL_BLOCK.get());
 
         dropSelf(CWBlocks.SALT_BLOCK.get());
 

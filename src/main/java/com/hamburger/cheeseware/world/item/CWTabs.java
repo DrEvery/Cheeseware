@@ -26,6 +26,7 @@ public class CWTabs {
                         output.accept(CWItems.PECORINO_CHEESE);
                         output.accept(CWItems.PECORINO_WHEEL);
                         output.accept(CWItems.CASU_MARTZU_CHEESE);
+                        output.accept(CWItems.CASU_MARTZU_WHEEL);
                         output.accept(CWItems.MUNSTER_CHEESE);
 
                         output.accept(CWItems.CRACKER);

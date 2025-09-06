@@ -10,8 +10,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class SwissWheel extends AbstractCheeseWheelBlock {
-    public SwissWheel(Properties properties) {
+public class CasuMatzuWheel extends AbstractCheeseWheelBlock {
+    public CasuMatzuWheel(Properties properties) {
         super(properties);
     }
 
@@ -20,14 +20,12 @@ public class SwissWheel extends AbstractCheeseWheelBlock {
         int leftovers = state.getValue(PIECES);
         if (leftovers < 3) {
             level.setBlock(pos, state.setValue(PIECES, leftovers + 1), 3);
-            player.getInventory().add(CWItems.SWISS_CHEESE.toStack());
+            player.getInventory().add(CWItems.CASU_MARTZU_CHEESE.toStack());
         } else {
             level.removeBlock(pos, false);
             level.gameEvent(player, GameEvent.BLOCK_DESTROY, pos);
-            player.getInventory().add(CWItems.SWISS_CHEESE.toStack());
+            player.getInventory().add(CWItems.CASU_MARTZU_CHEESE.toStack());
         }
         return InteractionResult.SUCCESS;
     }
 }
-
-
