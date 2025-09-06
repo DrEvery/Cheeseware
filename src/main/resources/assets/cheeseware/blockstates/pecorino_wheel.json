@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "cheeseware:block/pecorino_wheel"
+    },
+    "bites=1": {
+      "model": "cheeseware:block/pecorino_wheel_1"
+    },
+    "bites=2": {
+      "model": "cheeseware:block/pecorino_wheel_2"
+    },
+    "bites=3": {
+      "model": "cheeseware:block/pecorino_wheel_3"
+    }
+  }
+}

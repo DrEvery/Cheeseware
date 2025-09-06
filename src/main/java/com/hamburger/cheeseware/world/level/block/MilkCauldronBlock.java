@@ -21,10 +21,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.function.Function;
-
-
-//MAKE THIS A FUCKING BLOCK ENTITY
 public class MilkCauldronBlock extends AbstractCauldronBlock implements EntityBlock {
     public static final MapCodec<MilkCauldronBlock> CODEC = simpleCodec(MilkCauldronBlock::new);
 
@@ -38,7 +34,7 @@ public class MilkCauldronBlock extends AbstractCauldronBlock implements EntityBl
             if (level.getBlockEntity(pos) instanceof MilkCauldronBlockEntity milkCauldronBlockEntity) {
                 if (!milkCauldronBlockEntity.getIsCurdling()) {
                     stack.shrink(1);
-                    level.scheduleTick(pos,this, 600);
+                    level.scheduleTick(pos, this, 600);
                     milkCauldronBlockEntity.setIsCurdling(true);
 
                 }
@@ -53,7 +49,7 @@ public class MilkCauldronBlock extends AbstractCauldronBlock implements EntityBl
         if (level.isAreaLoaded(pos, 1)) {
             if (level.getMaxLocalRawBrightness(pos) >= 15) {
                 level.setBlockAndUpdate(pos, CWBlocks.CHEDDAR_CAULDRON.get().defaultBlockState());
-                }
+            }
         }
     }
 

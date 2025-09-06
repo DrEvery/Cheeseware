@@ -3,6 +3,7 @@ package com.hamburger.cheeseware.world.level.block;
 import com.hamburger.cheeseware.Cheeseware;
 import com.hamburger.cheeseware.world.level.block.entity.MilkCauldronBlockEntity;
 import com.hamburger.cheeseware.world.level.block.wheels.CheddarWheel;
+import com.hamburger.cheeseware.world.level.block.wheels.PecorinoWheel;
 import com.hamburger.cheeseware.world.level.block.wheels.SwissWheel;
 import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.core.registries.Registries;
@@ -36,15 +37,21 @@ public class CWBlocks {
     );
 
     //Cheese Wheels
-    public static final DeferredBlock<CheddarWheel> CHEDDAR_WHEEL_BLOCK = BLOCKS.registerBlock(
+    public static final DeferredBlock<AbstractCheeseWheelBlock> CHEDDAR_WHEEL_BLOCK = BLOCKS.registerBlock(
             "cheddar_wheel",
             properties -> new CheddarWheel(BlockBehaviour.Properties.of().strength(0.5F).noOcclusion().sound(SoundType.HONEY_BLOCK)
                     .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":cheddar_wheel"))))
     );
 
-    public static final DeferredBlock<SwissWheel> SWISS_WHEEL_BLOCK = BLOCKS.registerBlock(
+    public static final DeferredBlock<AbstractCheeseWheelBlock> SWISS_WHEEL_BLOCK = BLOCKS.registerBlock(
             "swiss_wheel",
             properties -> new SwissWheel(BlockBehaviour.Properties.of().strength(0.5F).noOcclusion().sound(SoundType.HONEY_BLOCK)
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":swiss_wheel"))))
+    );
+
+    public static final DeferredBlock<AbstractCheeseWheelBlock> PECORINO_WHEEL_BLOCK = BLOCKS.registerBlock(
+            "pecorino_wheel",
+            properties -> new PecorinoWheel(BlockBehaviour.Properties.of().strength(0.5F).noOcclusion().sound(SoundType.HONEY_BLOCK)
                     .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":swiss_wheel"))))
     );
 
