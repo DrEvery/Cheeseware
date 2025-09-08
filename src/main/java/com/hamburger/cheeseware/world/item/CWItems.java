@@ -85,6 +85,11 @@ public class CWItems {
             )
     );
 
+    public static final DeferredItem<BlockItem> MUNSTER_WHEEL = CHEESEITEMS.registerSimpleBlockItem(
+            "munster_wheel",
+            CWBlocks.MUNSTER_WHEEL_BLOCK
+    );
+
     //MISC
     public static final DeferredItem<Item> CRACKER = CHEESEITEMS.registerItem(
             "cracker",

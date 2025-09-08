@@ -2,10 +2,7 @@ package com.hamburger.cheeseware.world.level.block;
 
 import com.hamburger.cheeseware.Cheeseware;
 import com.hamburger.cheeseware.world.level.block.entity.MilkCauldronBlockEntity;
-import com.hamburger.cheeseware.world.level.block.wheels.CasuMatzuWheel;
-import com.hamburger.cheeseware.world.level.block.wheels.CheddarWheel;
-import com.hamburger.cheeseware.world.level.block.wheels.PecorinoWheel;
-import com.hamburger.cheeseware.world.level.block.wheels.SwissWheel;
+import com.hamburger.cheeseware.world.level.block.wheels.*;
 import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -60,6 +57,12 @@ public class CWBlocks {
             "casu_martzu_wheel",
             properties -> new CasuMatzuWheel(BlockBehaviour.Properties.of().strength(0.5F).noOcclusion().sound(SoundType.HONEY_BLOCK)
                     .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":casu_martzu_wheel"))))
+    );
+
+    public static final DeferredBlock<AbstractCheeseWheelBlock> MUNSTER_WHEEL_BLOCK = BLOCKS.registerBlock(
+            "munster_wheel",
+            properties -> new MunsterWheel(BlockBehaviour.Properties.of().strength(0.5F).noOcclusion().sound(SoundType.HONEY_BLOCK)
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":munster_wheel"))))
     );
 
     public static final DeferredBlock<Block> SALT_BLOCK = BLOCKS.registerBlock(

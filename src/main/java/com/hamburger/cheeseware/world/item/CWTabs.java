@@ -16,17 +16,18 @@ public class CWTabs {
     public static final Supplier<CreativeModeTab> CHEESETAB = CHEESETABS.register(
             "cheesetab",
             () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + Cheeseware.MODID + ".cheesetab"))
+                    .title(Component.translatable("itemGroup.%s.cheesetab".formatted(Cheeseware.MODID)))
                     .icon(() -> new ItemStack(CWItems.CHEDDAR_CHEESE.get()))
                     .displayItems((params, output) -> {
                         output.accept(CWItems.CHEDDAR_WHEEL);
                         output.accept(CWItems.CHEDDAR_CHEESE);
                         output.accept(CWItems.SWISS_WHEEL);
                         output.accept(CWItems.SWISS_CHEESE);
-                        output.accept(CWItems.PECORINO_CHEESE);
                         output.accept(CWItems.PECORINO_WHEEL);
-                        output.accept(CWItems.CASU_MARTZU_CHEESE);
+                        output.accept(CWItems.PECORINO_CHEESE);
                         output.accept(CWItems.CASU_MARTZU_WHEEL);
+                        output.accept(CWItems.CASU_MARTZU_CHEESE);
+                        output.accept(CWItems.MUNSTER_WHEEL);
                         output.accept(CWItems.MUNSTER_CHEESE);
 
                         output.accept(CWItems.CRACKER);

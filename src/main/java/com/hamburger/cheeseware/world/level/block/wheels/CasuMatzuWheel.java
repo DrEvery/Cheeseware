@@ -18,13 +18,15 @@ public class CasuMatzuWheel extends AbstractCheeseWheelBlock {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         int leftovers = state.getValue(PIECES);
-        if (leftovers < 3) {
-            level.setBlock(pos, state.setValue(PIECES, leftovers + 1), 3);
-            player.getInventory().add(CWItems.CASU_MARTZU_CHEESE.toStack());
-        } else {
-            level.removeBlock(pos, false);
-            level.gameEvent(player, GameEvent.BLOCK_DESTROY, pos);
-            player.getInventory().add(CWItems.CASU_MARTZU_CHEESE.toStack());
+        if (!level.isClientSide) {
+            if (leftovers < 3) {
+                level.setBlock(pos, state.setValue(PIECES, leftovers + 1), 3);
+                player.getInventory().add(CWItems.CASU_MARTZU_CHEESE.toStack());
+            } else {
+                level.removeBlock(pos, false);
+                level.gameEvent(player, GameEvent.BLOCK_DESTROY, pos);
+                player.getInventory().add(CWItems.CASU_MARTZU_CHEESE.toStack());
+            }
         }
         return InteractionResult.SUCCESS;
     }
