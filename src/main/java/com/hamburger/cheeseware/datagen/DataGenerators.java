@@ -25,6 +25,8 @@ public class DataGenerators {
         event.createProvider(ENUSLangProvider::new);
         event.createProvider(LOLLanguageProvider::new);
 
+        event.createProvider(CWRecipeProvider.Runner::new);
+
         event.addProvider(new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(CWLootSubProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
 

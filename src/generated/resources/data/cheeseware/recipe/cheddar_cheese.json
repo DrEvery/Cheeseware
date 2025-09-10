@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "cheeseware:curds",
+    "cheeseware:salt",
+    "minecraft:orange_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "cheeseware:cheddar_cheese"
+  }
+}

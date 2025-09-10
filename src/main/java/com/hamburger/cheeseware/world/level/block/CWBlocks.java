@@ -1,7 +1,6 @@
 package com.hamburger.cheeseware.world.level.block;
 
 import com.hamburger.cheeseware.Cheeseware;
-import com.hamburger.cheeseware.world.level.block.entity.MilkCauldronBlockEntity;
 import com.hamburger.cheeseware.world.level.block.wheels.*;
 import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.core.registries.Registries;
@@ -10,14 +9,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.AbstractCauldronBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
-import java.util.function.Supplier;
 
 public class CWBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Cheeseware.MODID);
@@ -28,10 +24,10 @@ public class CWBlocks {
                     .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":milk_cauldron"))).randomTicks())
     );
 
-    public static final DeferredBlock<AbstractCauldronBlock> CHEDDAR_CAULDRON = BLOCKS.registerBlock(
-            "cheddar_cauldron",
-            properties -> new CheddarCauldronBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(2.0F).requiresCorrectToolForDrops().noOcclusion()
-                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":cheddar_cauldron"))), CauldronInteraction.EMPTY)
+    public static final DeferredBlock<AbstractCauldronBlock> CURD_CAULDRON = BLOCKS.registerBlock(
+            "curd_cauldron",
+            properties -> new CurdCauldronBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(2.0F).requiresCorrectToolForDrops().noOcclusion()
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(Cheeseware.MODID + ":curd_cauldron"))), CauldronInteraction.EMPTY)
     );
 
     //Cheese Wheels

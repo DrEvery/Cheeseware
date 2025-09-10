@@ -48,7 +48,7 @@ public class MilkCauldronBlock extends AbstractCauldronBlock implements EntityBl
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource randomSource) {
         if (level.isAreaLoaded(pos, 1)) {
             if (level.getMaxLocalRawBrightness(pos) >= 15) {
-                level.setBlockAndUpdate(pos, CWBlocks.CHEDDAR_CAULDRON.get().defaultBlockState());
+                level.setBlockAndUpdate(pos, CWBlocks.CURD_CAULDRON.get().defaultBlockState());
             }
         }
     }

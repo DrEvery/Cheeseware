@@ -28,7 +28,7 @@ public class CWLootSubProvider extends BlockLootSubProvider {
         dropSelf(CWBlocks.SALT_BLOCK.get());
 
         dropOther(CWBlocks.MILK_CAULDRON.get(), Items.CAULDRON);
-        dropOther(CWBlocks.CHEDDAR_CAULDRON.get(), Items.CAULDRON);
+        dropOther(CWBlocks.CURD_CAULDRON.get(), Items.CAULDRON);
     }
 
     @Override

@@ -13,6 +13,17 @@ public class CWItems {
     public static final DeferredRegister.Items CHEESEITEMS = DeferredRegister.createItems(Cheeseware.MODID);
 
     //Cheeses
+    public static final DeferredItem<Item> CURDS = CHEESEITEMS.registerItem(
+            "curds",
+            Item::new,
+            new Item.Properties().food(
+                    new FoodProperties.Builder()
+                            .nutrition(4)
+                            .saturationModifier(5F)
+                            .build()
+            )
+    );
+
     public static final DeferredItem<Item> CHEDDAR_CHEESE = CHEESEITEMS.registerItem(
             "cheddar_cheese",
             Item::new,

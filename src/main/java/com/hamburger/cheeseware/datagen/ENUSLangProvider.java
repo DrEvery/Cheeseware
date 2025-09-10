@@ -13,6 +13,7 @@ public class ENUSLangProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         //Items
+        this.addItem(CWItems.CURDS, "Curds");
         this.addItem(CWItems.CHEDDAR_CHEESE, "Cheddar Cheese");
         this.addItem(CWItems.CHEDDAR_WHEEL, "Cheddar Wheel");
         this.addItem(CWItems.SWISS_CHEESE, "Swiss Cheese");
